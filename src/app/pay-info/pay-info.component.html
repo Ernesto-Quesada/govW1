@@ -18,12 +18,12 @@
             {{types}}
 
             <div *ngIf="types === 'Credit Card'" class="credit-card-icons">
-                <img src="../../assets/images/08-desktopfunneltemplatesstep4payment-group-9.png" alt="" >
-              </div>
+              <img src="../../assets/images/08-desktopfunneltemplatesstep4payment-group-9.png" alt="">
+            </div>
 
-              <div *ngIf="types === 'PayPal'" class="credit-card-icons">
-                  <img src="../../assets/images/14-desktoppaymentsamplesgoogle1-bitmap@2x.png" width="60" alt="" >
-                </div>
+            <div *ngIf="types === 'PayPal'" class="credit-card-icons">
+              <img src="../../assets/images/14-desktoppaymentsamplesgoogle1-bitmap@2x.png" width="60" alt="">
+            </div>
 
           </mat-panel-title>
         </mat-expansion-panel-header>
@@ -34,10 +34,8 @@
         <div *ngIf="types ===  'PayPal'">
           <app-pay-pal></app-pay-pal>
         </div>
+        
       </mat-expansion-panel>
-
-
     </mat-accordion>
-
   </mat-card-content>
 </mat-card>

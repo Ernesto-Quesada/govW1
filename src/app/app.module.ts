@@ -15,7 +15,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PayInfoComponent } from './pay-info/pay-info.component';
 import { LayoutComponent } from './layout/layout.component';
-import { ReusePaymentComponent } from './reuse-payment/reuse-payment.component';
 import { CreditCardComponent } from './credit-card/credit-card.component';
 import { FormsModule } from '@angular/forms';
 import { PayPalComponent } from './pay-pal/pay-pal.component';
@@ -25,7 +24,6 @@ import { PayPalComponent } from './pay-pal/pay-pal.component';
     AppComponent,
     PayInfoComponent,
     LayoutComponent,
-    ReusePaymentComponent,
     CreditCardComponent,
     PayPalComponent
   ],
@@ -41,7 +39,7 @@ import { PayPalComponent } from './pay-pal/pay-pal.component';
     MatGridListModule,
     MatSelectModule,
     MatInputModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

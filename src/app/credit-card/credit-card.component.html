@@ -5,40 +5,35 @@
         </mat-grid-tile>
         <mat-grid-tile>
             <form class="credit-card">
+                <mat-form-field class="input-data">
+                    <input matInput type="number" (input)="checkCard()" #cardNumber="ngModel" name="cardNumber"
+                        placeholder="Card Number" value="" required [(ngModel)]="creditCard.cardNumber">
+                </mat-form-field>
+                <mat-form-field class="input-data">
+                    <input matInput #personName="ngModel" name="personName" placeholder="Name on Card" value="" required
+                        [(ngModel)]="creditCard.personName">
+                </mat-form-field>
+                <mat-form-field class="margin-auto-5">
+                    <mat-label>Month</mat-label>
+                    <mat-select required [(ngModel)]="creditCard.month" #month="ngModel" name="month">
+                        <mat-option *ngFor="let m of months" [value]="m">
+                            {{m}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
 
-               
-                        <mat-form-field class="input-data" >
-                            <input matInput type="number" (input)="checkCard()" #cardNumber="ngModel" name="cardNumber" placeholder="Card Number" value="" required [(ngModel)]="creditCard.cardNumber">
-                        </mat-form-field>
-                   
-                        <mat-form-field class="input-data" >
-                            <input matInput  #personName="ngModel" name="personName" placeholder="Name on Card" value="" required [(ngModel)]="creditCard.personName">
-                        </mat-form-field>
-                   
-                                        <mat-form-field class="margin-auto-5">
-                                            <mat-label>Month</mat-label>
-                                            <mat-select required [(ngModel)]="creditCard.month" #month="ngModel" name="month">
-                                                    <mat-option *ngFor="let m of months" [value]="m">
-                                                            {{m}}
-                                                          </mat-option>
-                                                        </mat-select>
-                                        </mat-form-field>
-                                   
-                                        <mat-form-field class="margin-auto-5">
-                                            <mat-label>Day</mat-label>
-                                            <mat-select required [(ngModel)]="creditCard.day" #day="ngModel" name="day">
-                                                    <mat-option *ngFor="let d of days" [value]="d">
-                                                            {{d}}
-                                                          </mat-option>
-                                                        </mat-select>
-                                        </mat-form-field>
-                                    
-                                        <mat-form-field class="margin-auto-5" >
-                                            <input matInput placeholder="CVV" value=""  [(ngModel)]="creditCard.cvv" #cvv="ngModel" name="cvv">
-                                        </mat-form-field>
-                                    
+                <mat-form-field class="margin-auto-5">
+                    <mat-label>Day</mat-label>
+                    <mat-select required [(ngModel)]="creditCard.day" #day="ngModel" name="day">
+                        <mat-option *ngFor="let d of days" [value]="d">
+                            {{d}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
 
-               
+                <mat-form-field class="margin-auto-5">
+                    <input matInput placeholder="CVV" value="" [(ngModel)]="creditCard.cvv" #cvv="ngModel" name="cvv">
+                </mat-form-field>
             </form>
         </mat-grid-tile>
     </mat-grid-list>
